@@ -36,9 +36,9 @@ export default function Contact() {
 
             <div className="space-y-5">
               {[
-                { icon: Mail, label: 'Email', value: 'studio@ladysculptorarts.com' },
-                { icon: Phone, label: 'Phone', value: '+234 800 000 0000' },
-                { icon: MapPin, label: 'Studio', value: 'Lady Sculptor Studio, Abuja, Nigeria' },
+                { icon: Mail, label: 'Email', value: 'estheraqua86@gmail.com' },
+                { icon: Phone, label: 'Phone', value: '+234 902 659 3544' },
+                { icon: MapPin, label: 'Studio', value: 'LADY SCULPTOR ART GALLERY 235 ikot Ekpene road, Uyo Akwa Ibom state' },
               ].map((c) => {
                 const Icon = c.icon;
                 return (

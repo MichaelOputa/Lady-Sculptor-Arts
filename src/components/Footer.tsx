@@ -55,9 +55,9 @@ export default function Footer() {
           <div className="md:col-span-4">
             <div className="text-xs uppercase tracking-[0.25em] text-gold-400 mb-5">Studio</div>
             <ul className="space-y-3 text-sm">
-              <li>studio@ladysculptorarts.com</li>
-              <li>+234 800 000 0000</li>
-              <li>Abuja, Nigeria</li>
+              <li>estheraqua86@gmail.com</li>
+              <li>+234 706 578 0476</li>
+              <li>235 ikot Ekpene road, Uyo Akwa Ibom state</li>
               <li className="pt-2">
                 <a href="#contact" className="btn-outline !py-2.5 !px-6 text-sm">
                   Start a Commission
