@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-warmblack font-sans antialiased;
+    background-color: #f9f4ec;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+  ::selection {
+    @apply bg-gold-300 text-warmblack;
+  }
+}
+
+@layer components {
+  .container-lux {
+    @apply max-w-7xl mx-auto px-6 md:px-10 lg:px-16;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-gold-400 text-warmblack font-medium tracking-wide transition-all duration-500 hover:bg-gold-300 hover:shadow-gold-glow hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full border border-gold-400 text-gold-700 font-medium tracking-wide transition-all duration-500 hover:bg-gold-400 hover:text-warmblack hover:-translate-y-0.5;
+  }
+  .section-eyebrow {
+    @apply inline-flex items-center gap-3 text-gold-600 uppercase tracking-[0.3em] text-xs font-medium;
+  }
+  .section-eyebrow::before,
+  .section-eyebrow::after {
+    content: '';
+    @apply w-8 h-px bg-gold-400/60;
+  }
+  .heading-xl {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight;
+  }
+  .heading-lg {
+    @apply font-serif text-3xl md:text-4xl lg:text-5xl leading-[1.15] tracking-tight;
+  }
+  .heading-md {
+    @apply font-serif text-2xl md:text-3xl leading-tight tracking-tight;
+  }
+  .text-body {
+    @apply font-sans text-base md:text-lg leading-[1.7] text-chocolate-700/90;
+  }
+  .card-lux {
+    @apply bg-white/70 backdrop-blur-sm rounded-2xl border border-chocolate-200/40 shadow-warm-sm transition-all duration-500;
+  }
+}
+
+/* Reveal-on-scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Decorative ring motif */
+.ring-motif {
+  background: radial-gradient(circle at center, transparent 58%, rgba(201, 138, 10, 0.18) 58.5%, rgba(201, 138, 10, 0.18) 60%, transparent 60.5%);
+}
+
+/* Gold text gradient */
+.text-gold-gradient {
+  background: linear-gradient(120deg, #c98a0a 0%, #e8a820 40%, #f9c843 60%, #c98a0a 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f9f4ec; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#c98a0a, #9a5019);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover { background: #9a5019; }
+
+/* Hide scrollbar for filter tabs */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
