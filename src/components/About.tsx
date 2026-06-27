@@ -14,7 +14,7 @@ export default function About() {
           <div className="lg:col-span-5 relative">
             <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-warm-lg ring-1 ring-chocolate-200/50">
               <img
-                src="/images/the_artist_(1).jpeg"
+                src="/images/the artist (1).jpeg"
                 alt="Lady Sculptor portrait"
                 className="w-full h-full object-cover"
               />
