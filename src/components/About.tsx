@@ -14,7 +14,7 @@ export default function About() {
           <div className="lg:col-span-5 relative">
             <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-warm-lg ring-1 ring-chocolate-200/50">
               <img
-                src="/images/the artist (1).jpeg"
+                src="/images/the_artist_(1).jpeg"
                 alt="Lady Sculptor portrait"
                 className="w-full h-full object-cover"
               />
@@ -52,6 +52,25 @@ export default function About() {
                 decoration — it is memory made visible. Every sculpture is a vessel; every painting, a
                 song in pigment.
               </p>
+            </div>
+
+            {/* About Me — third person */}
+            <div className="mt-10 card-lux p-7 md:p-8 border-l-4 border-gold-400">
+              <h3 className="font-serif text-2xl md:text-3xl text-chocolate-900 mb-5">
+                About Me
+              </h3>
+              <div className="space-y-4 text-base md:text-lg text-chocolate-800 leading-relaxed">
+                <p>
+                  She is Esther Mfon Aqua. She is 28 years old and a graduate of the University of
+                  Uyo, Akwa Ibom State, Nigeria, where she earned a Bachelor's degree in Fine and
+                  Industrial Arts. She is passionate about creativity, visual arts, and craftsmanship.
+                </p>
+                <p>
+                  She is the CEO of Lady Sculptural Art Gallery, located at 235 Ikot Ekpene Road,
+                  Uyo, Akwa Ibom State. Through her gallery, she is committed to creating unique
+                  artistic works and promoting excellence in the creative industry.
+                </p>
+              </div>
             </div>
 
             {/* Quote block */}

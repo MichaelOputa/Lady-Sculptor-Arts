@@ -36,19 +36,28 @@ export default function Contact() {
 
             <div className="space-y-5">
               {[
-                { icon: Mail, label: 'Email', value: 'estheraqua86@gmail.com' },
-                { icon: Phone, label: 'Phone', value: '+234 902 659 3544' },
-                { icon: MapPin, label: 'Studio', value: 'LADY SCULPTOR ART GALLERY 235 ikot Ekpene road, Uyo Akwa Ibom state' },
+                { icon: Mail, label: 'Email', value: 'estheraqua86@gmail.com', href: 'mailto:estheraqua86@gmail.com' },
+                { icon: Phone, label: 'Call', value: '0706 578 0476', href: 'tel:+2347065780476' },
+                { icon: Phone, label: 'WhatsApp', value: '0902 659 3544', href: 'https://wa.me/2349026593544' },
+                { icon: MapPin, label: 'Gallery Address', value: 'Lady Sculptor Art Gallery, 235 Ikot Ekpene Road, Uyo, Akwa Ibom State' },
               ].map((c) => {
                 const Icon = c.icon;
                 return (
                   <div key={c.label} className="flex items-start gap-4">
-                    <div className="w-11 h-11 rounded-full bg-chocolate-900 border border-gold-400/30 flex items-center justify-center flex-shrink-0">
-                      <Icon size={18} className="text-gold-300" />
+                    <div className="w-10 h-10 rounded-full bg-chocolate-900 border border-gold-400/30 flex items-center justify-center flex-shrink-0">
+                      <Icon size={16} className="text-gold-300" />
                     </div>
                     <div>
                       <div className="text-xs uppercase tracking-[0.25em] text-gold-400 mb-1">{c.label}</div>
-                      <div className="text-cream/90">{c.value}</div>
+                      {c.href ? (
+                        <a href={c.href} className="text-sm text-cream/90 hover:text-gold-300 transition-colors leading-relaxed">
+                          {c.value}
+                        </a>
+                      ) : (
+                        <div className="text-sm text-cream/90 leading-relaxed">
+                          {c.value}
+                        </div>
+                      )}
                     </div>
                   </div>
                 );
