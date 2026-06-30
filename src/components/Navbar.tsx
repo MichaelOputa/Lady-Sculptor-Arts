@@ -38,7 +38,7 @@ export default function Navbar() {
             }}
           >
             <img
-              src="/images/sculptor.jpeg"
+              src="/images/sculptor art.png"
               alt="Lady Sculptor Arts"
               className="w-full h-full object-contain object-center"
               /*
