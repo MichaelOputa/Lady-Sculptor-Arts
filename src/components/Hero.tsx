@@ -54,20 +54,28 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right: image */}
+        {/* Right: hero portrait from HeroPage.jpeg */}
         <div className="relative animate-fade-in">
+          {/*
+            Place the uploaded HeroPage.jpeg at:
+              public/images/hero-portrait.jpeg
+            It will be served at /images/hero-portrait.jpeg
+          */}
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-warm-lg ring-1 ring-gold-300/40">
             <img
-              src="/images/sculptor.jpeg"
-              alt="Lady Sculptor at work"
-              className="w-full h-full object-cover"
+              src="/images/sculptor.png"
+              alt="Lady Sculptor Arts – Sculpting Beauty, Expressing Culture"
+              className="w-full h-full object-cover object-top"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-chocolate-900/40 via-transparent to-transparent" />
+            {/* Soft gradient to blend bottom edge into the cream background */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#f9f4ec]/60 via-transparent to-transparent" />
+            {/* Subtle left-edge fade to blend into white space on smaller screens */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#f9f4ec]/20 via-transparent to-transparent" />
           </div>
 
           {/* Floating badge */}
           <div className="absolute -bottom-6 -left-6 bg-cream rounded-2xl shadow-warm-md px-6 py-5 border border-gold-200/60 max-w-[14rem]">
-            <div className="font-serif text-lg text-chocolate-800 leading-tight">“Art that remembers.”</div>
+            <div className="font-serif text-lg text-chocolate-800 leading-tight">"Art that remembers."</div>
             <div className="text-xs uppercase tracking-[0.2em] text-gold-600 mt-2">Studio Motto</div>
           </div>
 
