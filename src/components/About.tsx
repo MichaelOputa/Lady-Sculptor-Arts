@@ -54,10 +54,10 @@ export default function About() {
               </p>
             </div>
 
-            {/* About Me — third person */}
+            {/* About Her — third person */}
             <div className="mt-10 card-lux p-7 md:p-8 border-l-4 border-gold-400">
               <h3 className="font-serif text-2xl md:text-3xl text-chocolate-900 mb-5">
-                About Me
+                About Her
               </h3>
               <div className="space-y-4 text-base md:text-lg text-chocolate-800 leading-relaxed">
                 <p>

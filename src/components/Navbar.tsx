@@ -18,41 +18,57 @@ export default function Navbar() {
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled
           ? 'bg-cream/90 backdrop-blur-md shadow-warm-sm py-2'
-          : 'bg-transparent py-4'
+          : 'bg-transparent py-3'
       }`}
     >
       <nav className="container-lux flex items-center justify-between">
 
-        {/* Brand */}
+        {/* ── Brand ── */}
         <a href="#home" className="flex items-center gap-3 group flex-shrink-0">
-          {/* Circular logo container — clips the square image into a perfect circle */}
+
+          {/* Perfect circle — equal width & height, clips image into circle */}
           <span
-            className={`
-              flex-shrink-0 rounded-full overflow-hidden
-              ring-2 ring-gold-400/50 group-hover:ring-gold-300
-              shadow-warm-sm transition-all duration-500
-              w-11 h-11 sm:w-13 sm:h-13 lg:w-14 lg:h-14
-            `}
-            style={{ width: 'clamp(2.75rem, 4vw, 3.5rem)', height: 'clamp(2.75rem, 4vw, 3.5rem)' }}
+            className="flex-shrink-0 overflow-hidden bg-white transition-all duration-500 group-hover:scale-[1.04]"
+            style={{
+              width:        'clamp(2.25rem, 3.5vw, 3rem)',
+              height:       'clamp(2.25rem, 3.5vw, 3rem)',
+              borderRadius: '50%',
+              border:       '2px solid rgba(201,138,10,0.55)',
+              boxShadow:    '0 0 0 3px rgba(201,138,10,0.08), 0 3px 14px rgba(201,138,10,0.18)',
+            }}
           >
             <img
               src="/images/sculptor.jpeg"
               alt="Lady Sculptor Arts"
-              className="w-full h-full object-cover object-center scale-[1.08]"
+              className="w-full h-full object-contain object-center"
+              /*
+                object-cover fills the circle completely.
+                scale-[1.15] zooms in slightly so the emblem
+                (woman face + LS letters) fills the frame edge-to-edge
+                without white corners showing.
+              */
             />
           </span>
 
-          {/* Brand text alongside */}
-          <span className="flex flex-col leading-tight">
+          {/* Text: large serif name + gold ARTS row */}
+          <span className="flex flex-col leading-none">
             <span
-              className={`font-serif text-base sm:text-lg tracking-wide transition-colors ${
+              className={`font-serif font-normal tracking-wide leading-tight transition-colors ${
                 scrolled ? 'text-chocolate-800' : 'text-chocolate-900'
               }`}
+              style={{ fontSize: 'clamp(1.1rem, 1.8vw, 1.5rem)' }}
             >
-              Lady Sculptor
+              Lady sculptor
             </span>
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.35em] text-gold-600">
-              Arts
+            <span className="flex items-center gap-1.5 mt-1">
+              <span className="block h-px bg-gold-500" style={{ width: 'clamp(1rem, 1.4vw, 1.3rem)' }} />
+              <span
+                className="uppercase text-gold-600 font-semibold tracking-[0.35em] leading-none"
+                style={{ fontSize: 'clamp(0.52rem, 0.8vw, 0.65rem)' }}
+              >
+                Arts
+              </span>
+              <span className="block h-px bg-gold-500" style={{ width: 'clamp(1rem, 1.4vw, 1.3rem)' }} />
             </span>
           </span>
         </a>

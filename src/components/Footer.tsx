@@ -53,7 +53,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-gold-300 mt-0.5 flex-shrink-0" />
-                <span>Lady Sculptor Art Gallery, 235 Ikot Ekpene Road, Uyo, Akwa Ibom State</span>
+                <span>Lady Sculptor Art Gallery, 235 Ikot Ekpene Road, Uyo, Akwa Ibom State, Nigeria</span>
               </li>
             </ul>
             <div className="flex gap-3 mt-5">
